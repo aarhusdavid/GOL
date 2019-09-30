@@ -12,8 +12,7 @@ Classic::Classic()
 }
 Classic::~Classic()
 {
-    cout << "Classic deleted" << endl;
-    cout << endl;
+    
 }
 
 void Classic::ClassicGame(Grids* g)
@@ -144,5 +143,35 @@ void Classic::ClassicGame(Grids* g)
             neighbors = 0;
 
         }
+    }
+
+}
+
+int Classic::CopyGrid(Grids* g)
+{
+    int ans = 0;
+    int stablized = 0;
+    stablized = g->rows * g->columns;
+    int stableCount = 0;
+
+    for (int i = 0; i < g->rows; ++i)
+    {
+        for (int j = 0; j < g->columns; ++j)
+        {
+            if(g->curGrid[i][j] == g->nextGrid[i][j])
+            {
+                stableCount++;
+            }
+            g->curGrid[i][j] = g->nextGrid[i][j];
+        }
+    }
+
+    if (stableCount == stablized)
+    {
+        cout << "Grid has stablized, Press 'Enter' to exit" << endl;
+        cout << "-----------------------------------------------------------------" << endl;
+        if(cin.get()=='\n')
+            delete g;
+            exit(0);
     }
 }
