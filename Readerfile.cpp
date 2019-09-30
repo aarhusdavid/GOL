@@ -10,7 +10,7 @@ Readerfile::Readerfile()
 }
 Readerfile::~Readerfile()
 {
-    cout << "Readerfile deleted" << endl;
+    
 }
 
 int Readerfile::getRows(string input)

@@ -58,6 +58,18 @@ Grids::Grids(int rows, int columns, double density)
     curGrid[4][5] = {'X'};
     curGrid[4][6] = {'X'};
 
+    nextGrid[0][3] = {'X'};
+    nextGrid[0][6] = {'X'};
+    nextGrid[1][1] = {'X'};
+    nextGrid[1][4] = {'X'};
+    nextGrid[2][5] = {'X'};
+    nextGrid[2][6] = {'X'};
+    nextGrid[3][0] = {'X'};
+    nextGrid[3][2] = {'X'};
+    nextGrid[3][4] = {'X'};
+    nextGrid[4][5] = {'X'};
+    nextGrid[4][6] = {'X'};
+
 
 }
 
@@ -85,55 +97,87 @@ Grids::Grids(int rows, int columns, double density)
 
 void Grids::readGrid()
 {
-    // cout << this->rows << endl;
-    // cout << this->columns << endl;
-    int count = 0;
+
+    int colCount = this->columns;
+    int count = -1;
+
     for (int i = 0; i < this->rows; ++i)
     {
-        // cout << "1" << endl;
         for (int j = 0; j < this->columns; ++j)
         {
-            // cout << "2" << endl;
             count++;
-            cout << count << endl;
+            if (count == colCount)
+            {
+                cout << "\n" << endl;
+                count = 0;
+            }
+            cout << " " << this->nextGrid[i][j] <<  " ";
+
         }
     }
+    cout << endl;
+    cout << endl;
+
 }
 
-
-
-
-
-
-
-
-
-// curGrid = new char*[5];
-// nextGrid = new char*[5];
-// for (int i = 0; i < 5; ++i)
+// void Grids::Classic(Grids g)
 // {
-//     curGrid[i] = new char[7];
-//     nextGrid[i] = new char[7];
-// }
-// for (int i = 0; i < 5; ++i)
-// {
-//     for (int j = 0; j < 7; ++j)
+//     int neighbors = 0;
+//     int null = 0;
+//     int totalGridSpace = this->rows * this->columns;
+//     int totalGridCount = 0;
+//
+//     for (int i = 0; i < this->rows; ++i)
 //     {
-//         curGrid[i][j] = '-';
-//         nextGrid[i][j] = '-';
+//         for (int j = 0; j < this->columns; ++j)
+//         {
+//             char readCell = curGrid[i][j];
+//             if (curGrid[i][j+1] == 'X')
+//                 neighbors++;
+//             else
+//                 null++;
+//             if (curGrid[i+1][j] == 'X')
+//                 neighbors++;
+//             else
+//                 null++;
+//             if (curGrid[i+1][j+1] == 'X')
+//                 neighbors++;
+//             else
+//                 null++;
+//             if (curGrid[i-1][j+1] == 'X')
+//                 neighbors++;
+//             else
+//                 null++;
+//             if (curGrid[i-1][j] == 'X')
+//                 neighbors++;
+//             else
+//                 null++;
+//             if (curGrid[i-1][j-1] == 'X')
+//                 neighbors++;
+//             else
+//                 null++;
+//             if (curGrid[i][j-1] == 'X')
+//                 neighbors++;
+//             else
+//                 null++;
+//             if (curGrid[i+1][j-1] == 'X')
+//                 neighbors++;
+//             else
+//                 null++;
+//         }
 //     }
 // }
-// this -> rows = 5;
-// this -> columns = 7;
-//
-// curGrid[0][3] = {'X'};
-// curGrid[0][6] = {'X'};
-// curGrid[1][1] = {'X'};
-// curGrid[1][4] = {'X'};
-// curGrid[2][5] = {'X'};
-// curGrid[2][6] = {'X'};
-// curGrid[3][0] = {'X'};
-// curGrid[3][2] = {'X'};
-// curGrid[3][4] = {'X'};
-// curGrid[4][5] = {'X'};
-// curGrid[4][6] = {'X'};
+
+
+
+
+
+
+
+
+
+
+
+
+
+//yeet
