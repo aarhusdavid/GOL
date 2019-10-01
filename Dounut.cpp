@@ -39,98 +39,99 @@ void Dounut::DounutGame(Grids* g)
                 //checks if cell is in top left corner, if so checks opposing boundary cells as well as surrounding cells
                 if(((j-1) < (0)) && ((i-1) < (0)))
                 {
-                    //tried to find the solution with print statements
-                    cout << "hey" << endl;
-                    cout << col << endl;
-                    cout << g->curGrid[i][col] << endl;
-
+                    //tried to find the solution with print statement
                     if(g->curGrid[i][col] == 'X')
                     {
+                        cout << "1" << endl;
                         //tried to find the solution with print statements
-                        cout << "yo" << endl;
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[row][j] == 'X')
+                    if(g->curGrid[row][j] == 'X')
                     {
+                        cout << "2" << endl;
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[row][col] == 'X')
+                    if(g->curGrid[row][col] == 'X')
                     {
+                        cout << "3" << endl;
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][col] == 'X')
+                    if(g->curGrid[i+1][col] == 'X')
                     {
+                        cout << "4" << endl;
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[row][j+1] == 'X')
+                    if(g->curGrid[row][j+1] == 'X')
                     {
+                        cout << "5" << endl;
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][j] == 'X')
+                    if(g->curGrid[i+1][j] == 'X')
                     {
+                        cout << "6" << endl;
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i][j+1] == 'X')
+                    if(g->curGrid[i][j+1] == 'X')
                     {
+                        cout << "7" << endl;
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][j+1] == 'X')
+                    if(g->curGrid[i+1][j+1] == 'X')
                     {
+                        cout << "8" << endl;
                         //increments neighbors
                         neighbors++;
                     }
-                    else
-                    {
-                        neighborCount++;
-                    }
+
                 }
 
+
                 //checks if cell has no cell above, if so checks opposing boundary cells as well as surrounding cells
-                if(((i-1) < (0)))
+                else if(((i-1) < (0)))
                 {
                     if(g->curGrid[row][j] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[row][j-1] == 'X')
+                    if(g->curGrid[row][j-1] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[row][j+1] == 'X')
+                    if(g->curGrid[row][j+1] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i][j+1] == 'X')
+                    if(g->curGrid[i][j+1] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i][j-1] == 'X')
+                    if(g->curGrid[i][j-1] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][j+1] == 'X')
+                    if(g->curGrid[i+1][j+1] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][j-1] == 'X')
+                    if(g->curGrid[i+1][j-1] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][j] == 'X')
+                    if(g->curGrid[i+1][j] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
@@ -138,44 +139,44 @@ void Dounut::DounutGame(Grids* g)
                 }
 
                 //checks to see of cell is in the right corner,if so checks opposing boundary cells as well as surrounding cells
-                if(((i-1) < (0)) && ((j+1) > (col)))
+                else if(((i-1) < (0)) && ((j+1) > (col)))
                 {
                     if(g->curGrid[row][col] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[row][j-1] == 'X')
+                    if(g->curGrid[row][j-1] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[row][0] == 'X')
+                    if(g->curGrid[row][0] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[0][0] == 'X')
+                    if(g->curGrid[0][0] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[1][0] == 'X')
+                    if(g->curGrid[1][0] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][j] == 'X')
+                    if(g->curGrid[i+1][j] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][j-1] == 'X')
+                    if(g->curGrid[i+1][j-1] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i][j-1] == 'X')
+                    if(g->curGrid[i][j-1] == 'X')
                     {
                         //increments neighbors
                         neighbors++;
@@ -183,330 +184,347 @@ void Dounut::DounutGame(Grids* g)
 
                 }
 
-                //checks if cell has no cell to the left of it, if so checks opposing boundary cells as well as surrounding cells
-                if(((j-1) < (0)))
+                // //checks if cell has no cell to the left of it, if so checks opposing boundary cells as well as surrounding cells
+                else if(((j-1) < (0)))
                 {
                     if(g->curGrid[i-1][col] == 'X')
                     {
+                        cout << "1" << endl;
+
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i][col] == 'X')
+                    if(g->curGrid[i][col] == 'X')
                     {
+                        cout << "2" << endl;
+
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][col] == 'X')
+                    if(g->curGrid[i+1][col] == 'X')
                     {
+                        cout << "3" << endl;
+
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i-1][j] == 'X')
+                    cout << i << j << endl;
+                    if(g->curGrid[i-1][j] == 'X')
                     {
+                        cout << "4" << endl;
+
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i-1][j+1] == 'X')
+                    if(g->curGrid[i-1][j+1] == 'X')
                     {
+                        cout << "5" << endl;
+
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i][j+1] == 'X')
+                    if(g->curGrid[i][j+1] == 'X')
                     {
+                        cout << "6" << endl;
+
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][j] == 'X')
+                    if(g->curGrid[i+1][j] == 'X')
                     {
+                        cout << "7" << endl;
+
                         //increments neighbors
                         neighbors++;
                     }
-                    else if(g->curGrid[i+1][j+1] == 'X')
+                    if(g->curGrid[i+1][j+1] == 'X')
                     {
+                        cout << "8" << endl;
+
                         //increments neighbors
                         neighbors++;
                     }
                 }
 
-                //checks to see if cell has no cell to the right of it, if so checks opposing boundary cells as well as surrounding cells
-                if(((j+1) > (col)))
-                {
-                    if(g->curGrid[i-1][0] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i][0] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i+1][0] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i+1][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][j] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i+1][j] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                }
+                // //checks to see if cell has no cell to the right of it, if so checks opposing boundary cells as well as surrounding cells
+                // else if(((j+1) > (col)))
+                // {
+                //     if(g->curGrid[i-1][0] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i][0] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i+1][0] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i+1][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][j] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i+1][j] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                // }
+                //
+                // //checks to see if cell is at the bottom left corner,if so checks opposing boundary cells as well as surrounding cells
+                // else if(((i+1) > (row)) && ((j-1) < (0)))
+                // {
+                //     if(g->curGrid[0][0] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[0][j+1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][col] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i][col] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][j] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i][j+1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                // }
+                //
+                // //checks to see if cell has no cell below it, if so checks opposing boundary cells as well as surrounding cells
+                // else if(((i+1) > (row)))
+                // {
+                //     if(g->curGrid[0][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[0][j] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[0][j+1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][j] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][j+1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i][j+1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                // }
+                //
+                // //checks to see if cell is at the bottom right corner,if so checks opposing boundary cells as well as surrounding cells
+                // else if(((i+1) > (row)) && ((j+1) > (col)))
+                // {
+                //     if(g->curGrid[0][0] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][0] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[row][0] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[0][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[0][j] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //     if(g->curGrid[i-1][j] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //     }
+                //
+                // }
 
-                //checks to see if cell is at the bottom left corner,if so checks opposing boundary cells as well as surrounding cells
-                if(((i+1) > (row)) && ((j-1) < (0)))
-                {
-                    if(g->curGrid[0][0] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[0][j+1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][col] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i][col] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][j] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i][j+1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                }
-
-                //checks to see if cell has no cell below it, if so checks opposing boundary cells as well as surrounding cells
-                if(((i+1) > (row)))
-                {
-                    if(g->curGrid[0][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[0][j] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[0][j+1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][j] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][j+1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i][j+1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                }
-
-                //checks to see if cell is at the bottom right corner,if so checks opposing boundary cells as well as surrounding cells
-                if(((i+1) > (row)) && ((j+1) > (col)))
-                {
-                    if(g->curGrid[0][0] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][0] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[row][0] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[0][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[0][j] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-                    else if(g->curGrid[i-1][j] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                    }
-
-                    cout << "bound" << endl;
-                }
-
+                //classic rules
                 //checks to see if boundary cell exists
-                else if(((j+1) < (g->columns)))
-                {
-                    if (g->curGrid[i][j+1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                        neighborCount++;
-                    }
-                    else
-                        neighborCount++;
-                }
-
-                //checks to see if boundary cell exists
-                else if(((j-1) >= (0)))
-                {
-                    if (g->curGrid[i][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                        neighborCount++;
-                    }
-                    else
-                        neighborCount++;
-                }
-
-                //checks to see if boundary cell exists
-                else if(((i+1) < (g->rows)))
-                {
-                    if (g->curGrid[i+1][j] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                        neighborCount++;
-                    }
-                    else
-                        neighborCount++;
-                }
-
-                //checks to see if boundary cell exists
-                else if(((i-1) >= (0)))
-                {
-                    if (g->curGrid[i-1][j] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                        neighborCount++;
-                    }
-                    else
-                        neighborCount++;
-                }
-
-                //checks to see if boundary cell exists
-                else if(((i+1) < (g->rows)) && ((j-1) >= (0)))
-                {
-                    if (g->curGrid[i+1][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                        neighborCount++;
-                    }
-                    else
-                        neighborCount++;
-                }
-                //checks to see if boundary cell exists
-                else if(((i-1) >= (0)) && ((j+1) < (g->columns)))
-                {
-                    if (g->curGrid[i-1][j+1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                        neighborCount++;
-                    }
-                    else
-                        neighborCount++;
-                }
-
-                //checks to see if boundary cell exists
-                else if(((i-1) >= (0)) && ((j-1) >= (0)))
-                {
-                    if (g->curGrid[i-1][j-1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                        neighborCount++;
-                    }
-                    else
-                        neighborCount++;
-                }
-
-                //checks to see if boundary cell exists
-                else if(((i+1) < (g->rows)) && ((j+1) < (g->columns)))
-                {
-                    if (g->curGrid[i+1][j+1] == 'X')
-                    {
-                        //increments neighbors
-                        neighbors++;
-                        neighborCount++;
-                    }
-                    else
-                        neighborCount++;
-                }
+                // if(((j+1) < (g->columns)))
+                // {
+                //     if (g->curGrid[i][j+1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //         neighborCount++;
+                //     }
+                //     else
+                //         neighborCount++;
+                // }
+                //
+                // //checks to see if boundary cell exists
+                // else if(((j-1) >= (0)))
+                // {
+                //     if (g->curGrid[i][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //         neighborCount++;
+                //     }
+                //     else
+                //         neighborCount++;
+                // }
+                //
+                // //checks to see if boundary cell exists
+                // else if(((i+1) < (g->rows)))
+                // {
+                //     if (g->curGrid[i+1][j] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //         neighborCount++;
+                //     }
+                //     else
+                //         neighborCount++;
+                // }
+                //
+                // //checks to see if boundary cell exists
+                // else if(((i-1) >= (0)))
+                // {
+                //     if (g->curGrid[i-1][j] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //         neighborCount++;
+                //     }
+                //     else
+                //         neighborCount++;
+                // }
+                //
+                // //checks to see if boundary cell exists
+                // else if(((i+1) < (g->rows)) && ((j-1) >= (0)))
+                // {
+                //     if (g->curGrid[i+1][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //         neighborCount++;
+                //     }
+                //     else
+                //         neighborCount++;
+                // }
+                // //checks to see if boundary cell exists
+                // else if(((i-1) >= (0)) && ((j+1) < (g->columns)))
+                // {
+                //     if (g->curGrid[i-1][j+1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //         neighborCount++;
+                //     }
+                //     else
+                //         neighborCount++;
+                // }
+                //
+                // //checks to see if boundary cell exists
+                // else if(((i-1) >= (0)) && ((j-1) >= (0)))
+                // {
+                //     if (g->curGrid[i-1][j-1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //         neighborCount++;
+                //     }
+                //     else
+                //         neighborCount++;
+                // }
+                //
+                // //checks to see if boundary cell exists
+                // else if(((i+1) < (g->rows)) && ((j+1) < (g->columns)))
+                // {
+                //     if (g->curGrid[i+1][j+1] == 'X')
+                //     {
+                //         //increments neighbors
+                //         neighbors++;
+                //         neighborCount++;
+                //     }
+                //     else
+                //         neighborCount++;
+                // }
                 check++;
             }
 
