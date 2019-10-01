@@ -7,10 +7,8 @@ class Readerfile
 public:
     Readerfile(); //constructor
     ~Readerfile(); //destructor
-
     //initialized method
-    string read(string input);
-
-
-
+    int getRows(string input);
+    int getColumns(string input);
+    double getDensity(string input);
 };
