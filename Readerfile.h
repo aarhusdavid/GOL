@@ -7,8 +7,12 @@ class Readerfile
 public:
     Readerfile(); //constructor
     ~Readerfile(); //destructor
-    //initialized method
+
+    //initialized methods
+    //method that gets rows
     int getRows(string input);
+    //method that gets getColumns
     int getColumns(string input);
+    //method that calculates density 
     double getDensity(string input);
 };
