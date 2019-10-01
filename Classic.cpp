@@ -12,7 +12,7 @@ Classic::Classic()
 }
 Classic::~Classic()
 {
-    
+
 }
 
 void Classic::ClassicGame(Grids* g)
@@ -20,10 +20,6 @@ void Classic::ClassicGame(Grids* g)
     int neighbors = 0;
     int neighborCount = 0;
     int check = 0;
-
-    int totalGridSpace = g->rows * g->columns;
-    int totalGridCount = 0;
-    // cout << "heyyo" << endl;
 
     for (int i = 0; i < g->rows; ++i)
     {

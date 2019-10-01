@@ -1,6 +1,7 @@
 #include "Readerfile.h"
 #include "Grids.h"
 #include "Classic.h"
+#include "Dounut.h"
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
